@@ -1,34 +1,53 @@
 'use client';
 import React, { useState, useEffect, Suspense } from 'react';
 import Sidebar from '../Navbars/sidebar';
+import { useSearchParams } from 'next/navigation';
 import ViewCard from './viewCard';
 
 function Page() {
-    const [active, setActive] = useState('');
-
-    useEffect(() => {
-        const params = new URLSearchParams(window.location.search);
-        const algo = params.get('algorithm');
-        if (algo) {
-            setActive(algo);
-        }
-    }, []);
-
     return (
         <div className='flex flex-row justify-between'>
-            <div className='fixed left-5'>
-                <Sidebar activeState={active} />
-            </div>
-            <div className='xl:ml-[20%]'>
+            <Suspense fallback={<div>Loading sidebar...</div>}>
+                <SidebarWrapper />
+            </Suspense>
+            <div className=''>
                 <Suspense fallback={<div>Loading...</div>}>
-                    {active ? (
-                        <ViewCard algorithmName={active} />
-                    ) : (
-                        <div>Loading algorithm...</div> 
-                    )}
+                    <ViewCardWrapper />
                 </Suspense>
             </div>
         </div>
+    );
+}
+
+function SidebarWrapper() {
+    const searchParams = useSearchParams();
+    const [active, setActive] = useState('');
+
+    useEffect(() => {
+        const algo = searchParams.get('algorithm'); 
+        if (algo) {
+            setActive(algo);
+        }
+    }, [searchParams]);
+
+    return <Sidebar activeState={active} />;
+}
+
+function ViewCardWrapper() {
+    const searchParams = useSearchParams();
+    const [active, setActive] = useState('');
+
+    useEffect(() => {
+        const algo = searchParams.get('algorithm'); 
+        if (algo) {
+            setActive(algo);
+        }
+    }, [searchParams]);
+
+    return active ? (
+        <ViewCard algorithmName={active} />
+    ) : (
+        <div>Loading algorithm...</div> 
     );
 }
 
