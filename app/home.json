@@ -1,0 +1,118 @@
+{
+    
+        "app": {
+          "title": "Sortinger",
+          "motto": "Sort Kiya Kya?",
+          "description": "Sortinger is designed to help you visualize various sorting algorithms in an interactive and engaging manner. Explore the different techniques and understand how they work through visual representations.",
+          "creator": {
+            "name": "Aashish Kumar Singh",
+            "image": "https://avatars.githubusercontent.com/u/164627482?s=400&u=a1e3b2c06bb5f3c76a3e8651ec0870f9de9733e3&v=4",
+            "bio": "I’m a sophomore at NITP and a full-stack web developer currently working as an SDE-1 at TrialShopy MarketPlace Pvt. Ltd. I’m passionate about technology and eager to deepen my knowledge in AI and machine learning.",
+            "expertise": [
+              { "name": "Next.js", "logo": "https://raw.githubusercontent.com/vercel/next.js/canary/packages/next/client/logo.svg" },
+              { "name": "React.js", "logo": "https://raw.githubusercontent.com/facebook/react/main/fixtures/logo/logo.svg" },
+              { "name": "JavaScript", "logo": "https://upload.wikimedia.org/wikipedia/en/9/99/JavaScript-logo.png" },
+              { "name": "TypeScript", "logo": "https://raw.githubusercontent.com/microsoft/TypeScript/main/logo.png" },
+              { "name": "Tailwind CSS", "logo": "https://tailwindcss.com/_next/static/media/tailwindcss-logo.8d3a268f.svg" },
+              { "name": "HTML", "logo": "https://raw.githubusercontent.com/google/material-design-icons/master/av/1x/av_timer.svg" },
+              { "name": "CSS", "logo": "https://raw.githubusercontent.com/google/material-design-icons/master/image/1x/image.svg" },
+              { "name": "Bootstrap", "logo": "https://getbootstrap.com/docs/5.0/assets/img/bootstrap-logo.svg" },
+              { "name": "Material UI", "logo": "https://mui.com/static/logo.png" },
+              { "name": "Python", "logo": "https://www.python.org/community/logos/python-logo-master-v3-TM.png" },
+              { "name": "MySQL", "logo": "https://www.mysql.com/common/logos/logo-mysql-170x115.png" },
+              { "name": "MongoDB", "logo": "https://www.mongodb.com/logo/mongodb-logo.svg" },
+              { "name": "C", "logo": "https://upload.wikimedia.org/wikipedia/commons/3/3f/C_Programming_Language.svg" },
+              { "name": "Java", "logo": "https://upload.wikimedia.org/wikipedia/en/3/30/Java_logo_and_wordmark.svg" },
+              { "name": "Express.js", "logo": "https://expressjs.com/images/express-facebook-share.png" },
+              { "name": "Node.js", "logo": "https://nodejs.org/static/images/logo.svg" }
+            ],
+            "interests": [
+              { "name": "Full Stack Web Development", "logo": "https://www.droptica.com/sites/droptica.com/files/inline-images/Full%20stack%20developer%20infographics.png" },
+              { "name": "App Development", "logo": "https://via.placeholder.com/20" },
+              { "name": "Competitive Programming", "logo": "https://via.placeholder.com/20" },
+              { "name": "AI/ML", "logo": "https://via.placeholder.com/20" }
+            ],
+            "socials": {
+              "linkedin": "https://www.linkedin.com/in/aashish-kumar-singh-7110b02a9/",
+              "github": "https://github.com/AashishKumarSingh1"
+            }
+          }
+        },
+      
+      
+    "sortingAlgorithms": [
+      {
+        "title": "Bubble Sort",
+        "description": "A simple comparison-based sorting algorithm. Repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order.",
+        "complexity": {
+          "time": "O(n²)",
+          "space": "O(1)"
+        }
+      },
+      {
+        "title": "Selection Sort",
+        "description": "An in-place comparison sorting algorithm. It divides the input list into two parts: the sorted part and the unsorted part, repeatedly selecting the smallest element from the unsorted part.",
+        "complexity": {
+          "time": "O(n²)",
+          "space": "O(1)"
+        }
+      },
+      {
+        "title": "Insertion Sort",
+        "description": "A simple sorting algorithm that builds the final sorted array one item at a time. It is much less efficient on large lists than more advanced algorithms.",
+        "complexity": {
+          "time": "O(n²)",
+          "space": "O(1)"
+        }
+      },
+      {
+        "title": "Merge Sort",
+        "description": "A divide-and-conquer algorithm that was invented by John von Neumann in 1945. It divides the input array into two halves, sorts them and then merges them.",
+        "complexity": {
+          "time": "O(n log n)",
+          "space": "O(n)"
+        }
+      },
+      {
+        "title": "Quick Sort",
+        "description": "An efficient sorting algorithm that uses a divide-and-conquer approach to sort elements. It picks an element as a pivot and partitions the array around the pivot.",
+        "complexity": {
+          "time": "O(n log n) average, O(n²) worst",
+          "space": "O(log n)"
+        }
+      },
+      {
+        "title": "Heap Sort",
+        "description": "A comparison-based sorting technique based on a binary heap data structure. It works by first building a heap from the input data, then repeatedly removing the largest element.",
+        "complexity": {
+          "time": "O(n log n)",
+          "space": "O(1)"
+        }
+      },
+      {
+        "title": "Counting Sort",
+        "description": "An integer sorting algorithm that operates on a fixed range of values. It counts the occurrences of each value and calculates their positions in the output array.",
+        "complexity": {
+          "time": "O(n + k)",
+          "space": "O(k)"
+        }
+      },
+      {
+        "title": "Radix Sort",
+        "description": "A non-comparison-based integer sorting algorithm that sorts numbers by processing individual digits. It is efficient for sorting large lists of numbers.",
+        "complexity": {
+          "time": "O(nk)",
+          "space": "O(n + k)"
+        }
+      },
+      {
+        "title": "Bucket Sort",
+        "description": "A distribution sorting algorithm that divides elements into several buckets and then sorts these buckets individually. It is effective when input is uniformly distributed.",
+        "complexity": {
+          "time": "O(n + k)",
+          "space": "O(n)"
+        }
+      }
+    ]
+  }
+  

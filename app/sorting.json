@@ -1,0 +1,155 @@
+{
+  "algorithms": [
+      {
+          "name": "Bubble Sort",
+          "introduction": "Bubble Sort is one of the simplest sorting algorithms. It works by repeatedly stepping through the list of elements, comparing adjacent pairs, and swapping them if they are in the wrong order. This process is repeated until no more swaps are needed, indicating that the list is sorted.",
+          "steps": [
+              "Start at the beginning of the list.",
+              "Compare the first two elements.",
+              "If the first element is greater than the second, swap them.",
+              "Move to the next pair (second and third elements) and repeat the comparison.",
+              "Continue this process until you reach the end of the list.",
+              "At the end of the pass, the largest element will have 'bubbled' up to the end of the list.",
+              "Repeat the entire process for the remaining unsorted elements until no swaps are needed."
+          ],
+          "timeComplexity": {
+              "best": "O(n)",
+              "average": "O(n^2)",
+              "worst": "O(n^2)"
+          },
+          "spaceComplexity": "O(1)"
+      },
+      {
+          "name": "Selection Sort",
+          "introduction": "Selection Sort is an in-place comparison sorting algorithm that works by dividing the input list into two parts: a sorted region and an unsorted region. It continuously selects the smallest (or largest) element from the unsorted part and moves it to the end of the sorted part.",
+          "steps": [
+              "Start with the entire list as unsorted.",
+              "Find the minimum element in the unsorted part of the list.",
+              "Swap this minimum element with the first unsorted element.",
+              "Move the boundary between sorted and unsorted regions one element forward.",
+              "Repeat this process until the entire list is sorted."
+          ],
+          "timeComplexity": {
+              "best": "O(n^2)",
+              "average": "O(n^2)",
+              "worst": "O(n^2)"
+          },
+          "spaceComplexity": "O(1)"
+      },
+      {
+          "name": "Insertion Sort",
+          "introduction": "Insertion Sort builds a sorted array one element at a time. It takes each element from the unsorted part and finds its correct position in the sorted part, effectively creating a larger sorted segment with each step.",
+          "steps": [
+              "Assume the first element is already sorted.",
+              "Take the next element from the unsorted part.",
+              "Compare it with elements in the sorted part from right to left.",
+              "Shift all larger elements one position to the right to make space.",
+              "Insert the element into its correct position.",
+              "Repeat this process for all elements in the list until sorted."
+          ],
+          "timeComplexity": {
+              "best": "O(n)",
+              "average": "O(n^2)",
+              "worst": "O(n^2)"
+          },
+          "spaceComplexity": "O(1)"
+      },
+      {
+          "name": "Merge Sort",
+          "introduction": "Merge Sort is a divide-and-conquer algorithm that splits the list into halves, sorts each half, and merges the sorted halves back together. It is more efficient than simple algorithms like Bubble or Insertion Sort.",
+          "steps": [
+              "Divide the list into two halves.",
+              "Recursively apply Merge Sort to both halves until each half contains a single element.",
+              "Merge the sorted halves back together by comparing the smallest elements of both halves.",
+              "Continue merging until you have a fully sorted list."
+          ],
+          "timeComplexity": {
+              "best": "O(n log n)",
+              "average": "O(n log n)",
+              "worst": "O(n log n)"
+          },
+          "spaceComplexity": "O(n)"
+      },
+      {
+          "name": "Quick Sort",
+          "introduction": "Quick Sort is a highly efficient sorting algorithm that uses a divide-and-conquer strategy. It selects a 'pivot' element and partitions the array into two sub-arrays according to whether elements are less than or greater than the pivot.",
+          "steps": [
+              "Choose a pivot element from the list.",
+              "Partition the array into two sub-arrays: one with elements less than the pivot and one with elements greater than the pivot.",
+              "Recursively apply Quick Sort to the two sub-arrays.",
+              "Combine the sorted sub-arrays and the pivot to form a fully sorted array."
+          ],
+          "timeComplexity": {
+              "best": "O(n log n)",
+              "average": "O(n log n)",
+              "worst": "O(n^2)"
+          },
+          "spaceComplexity": "O(log n)"
+      },
+      {
+          "name": "Heap Sort",
+          "introduction": "Heap Sort uses a binary heap data structure to sort elements. It first builds a max heap from the input data, then repeatedly extracts the maximum element from the heap and rebuilds the heap until it is empty.",
+          "steps": [
+              "Build a max heap from the array.",
+              "Swap the root of the heap (maximum element) with the last element of the heap.",
+              "Reduce the size of the heap by one.",
+              "Heapify the root of the heap to maintain the heap property.",
+              "Repeat the process until the heap is empty."
+          ],
+          "timeComplexity": {
+              "best": "O(n log n)",
+              "average": "O(n log n)",
+              "worst": "O(n log n)"
+          },
+          "spaceComplexity": "O(1)"
+      },
+      {
+          "name": "Counting Sort",
+          "introduction": "Counting Sort is a non-comparison-based sorting algorithm that counts the number of occurrences of each distinct element and uses this information to place elements in their correct position. It's efficient for sorting integers or objects that can be mapped to integers.",
+          "steps": [
+              "Count the occurrences of each distinct element in the input array.",
+              "Calculate the cumulative count of the elements.",
+              "Place each element into the output array based on its cumulative count.",
+              "Repeat until all elements are placed in the output array."
+          ],
+          "timeComplexity": {
+              "best": "O(n + k)",
+              "average": "O(n + k)",
+              "worst": "O(n + k)"
+          },
+          "spaceComplexity": "O(k)"
+      },
+      {
+          "name": "Radix Sort",
+          "introduction": "Radix Sort is a non-comparison-based sorting algorithm that sorts numbers by processing individual digits. It uses Counting Sort as a subroutine to sort the numbers based on each digit, starting from the least significant digit.",
+          "steps": [
+              "Identify the maximum number to determine the number of digits.",
+              "For each digit (starting from the least significant), apply Counting Sort.",
+              "Group the numbers based on the current digit being processed.",
+              "Combine the results and move to the next digit until all digits are processed."
+          ],
+          "timeComplexity": {
+              "best": "O(nk)",
+              "average": "O(nk)",
+              "worst": "O(nk)"
+          },
+          "spaceComplexity": "O(n + k)"
+      },
+      {
+          "name": "Bucket Sort",
+          "introduction": "Bucket Sort is a distribution-based sorting algorithm that distributes elements into several 'buckets'. Each bucket is then sorted individually, either using a different sorting algorithm or recursively applying the bucket sort, and then merged together.",
+          "steps": [
+              "Create a number of empty buckets.",
+              "Distribute the elements into these buckets based on their value ranges.",
+              "Sort each bucket individually (using a sorting algorithm like Insertion Sort).",
+              "Merge all the sorted buckets back into a single list."
+          ],
+          "timeComplexity": {
+              "best": "O(n + k)",
+              "average": "O(n + k)",
+              "worst": "O(n^2)"
+          },
+          "spaceComplexity": "O(n + k)"
+      }
+  ]
+}
